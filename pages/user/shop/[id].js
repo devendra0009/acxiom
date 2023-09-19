@@ -15,9 +15,8 @@ const ProductDetail = () => {
     try {
         console.log(id);
       const res = await axios.get(`/api/getItems?vendorId=${id}`);
-      console.log(res);
+      console.log(res.data.vendor);
       setItems(res.data.vendor.items);
-      console.log(items);
     } catch (error) {
       console.log(error);
     }

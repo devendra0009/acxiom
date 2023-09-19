@@ -5,11 +5,11 @@ import { MyContext } from "../../utils/myContext";
 import ItemCard from "./ItemCard";
 
 const YourItems = () => {
-  const { user, setUser } = useContext(MyContext);
+  const [userId,setUserId]=useState(JSON.parse(localStorage.getItem('user'))?._id)
   const [items, setItems] = useState([]);
   const fetchItems = async () => {
     try {
-      const res = await axios.get(`/api/getItems?vendorId=${user?._id}`);
+      const res = await axios.get(`/api/getItems?vendorId=${userId}`);
       console.log(res);
       setItems(res.data.vendor.items);
       // console.log(items);
@@ -35,7 +35,7 @@ const YourItems = () => {
               key={idx}
               pname={item.pname}
               pprice={item.pprice}
-              vendorId={user?._id}
+              vendorId={userId}
               fetchItems={fetchItems}
             />
           ))}

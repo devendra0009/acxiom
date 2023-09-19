@@ -1,10 +1,10 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { MyContext } from '../../utils/myContext';
 import styled from '@emotion/styled';
 import Link from 'next/link';
 
 const UserNav = () => {
-  const [user,setUser]=useState('');
+  const [user,setUser]=useState(JSON.parse(localStorage.getItem('user')));
   useEffect(()=>{
     const usr=JSON.parse(localStorage.getItem('user'))
     if(usr)

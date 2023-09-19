@@ -10,7 +10,7 @@ import axios from 'axios';
 //   api_secret: 'd-JYnEvZwzHZF-0aQ2lVeAnTtn0',
 // });
 const AddItem = () => {
-  const { user, setUser } = useContext(MyContext);
+  // const { user, setUser } = useContext(MyContext);
   const [pname, setPname] = useState('');
   const [pprice, setPprice] = useState('');
   const [pimg, setPimg] = useState('');
@@ -36,7 +36,7 @@ const AddItem = () => {
     // });
 
     // const imageUrl = uploadResponse.secure_url;
-
+const user=JSON.parse(localStorage.getItem('user'))
     const formData = {
       pname,
       pprice,
