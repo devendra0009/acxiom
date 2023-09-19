@@ -1,0 +1,35 @@
+{
+  "name": "tri2do",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@monaco-editor/react": "^4.5.2",
+    "@next/font": "13.1.1",
+    "axios": "^1.2.3",
+    "chart.js": "^4.4.0",
+    "cloudinary": "^1.40.0",
+    "cookie": "^0.5.0",
+    "eslint": "8.31.0",
+    "eslint-config-next": "13.1.1",
+    "monaco-themes": "^0.4.4",
+    "mongodb": "^6.0.0",
+    "mongoose": "^7.5.2",
+    "next": "13.1.1",
+    "react": "18.2.0",
+    "react-chartjs-2": "^5.2.0",
+    "react-dom": "18.2.0",
+    "react-icons": "^4.7.1",
+    "react-select": "^5.7.4",
+    "react-spring": "^9.7.2",
+    "react-toastify": "^9.1.3",
+    "yup": "^1.2.0"
+  }
+}
